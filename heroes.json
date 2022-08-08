@@ -11,6 +11,18 @@
       "name": "Неизвестный герой",
       "description": "Скрывающийся в тени",
       "element": "wind"
+    },
+    {
+      "id": "36b522d1-4566-4a52-b519-08b49941e97d",
+      "name": "Rigina",
+      "description": "okoio",
+      "element": "wind"
+    },
+    {
+      "id": "c84f61f6-9d64-49d6-91f0-23a96851ca8b",
+      "name": "Rigina",
+      "description": "gfgffgg",
+      "element": "fire"
     }
   ],
   "filters": [
