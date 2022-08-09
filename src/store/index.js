@@ -1,6 +1,5 @@
-import { createStore, combineReducers, compose, applyMiddleware } from 'redux';
-import ReduxThunk from 'redux-thunk';
-import heroes from '../reducers/heroes';
+import { configureStore } from '@reduxjs/toolkit';
+import heroes from '../components/heroesList/heroesSlice';
 import filters from '../reducers/filters';
 
 const stringMiddleware= ()=>(next)=>(action)=>{
@@ -27,13 +26,20 @@ const enhancer=(createStore)=>(...args)=>{
   return store;
 }
 
-const store = createStore( 
-        combineReducers({heroes, filters}),
-        compose(applyMiddleware(ReduxThunk,stringMiddleware),
-        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+// const store = createStore( 
+//         combineReducers({heroes, filters}),
+//         compose(applyMiddleware(ReduxThunk,stringMiddleware),
+//         window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
        
-        )
+//         )
    
+const store=configureStore({
+  reducer:{heroes, filters},
+  middleware:getDefaultMiddleware=>getDefaultMiddleware().concat(stringMiddleware),
+  devTools: process.env.NODE_ENV !== 'production',
+
+})
+
 export default store;
 
 
