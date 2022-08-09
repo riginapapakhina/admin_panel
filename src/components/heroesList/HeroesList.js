@@ -5,7 +5,7 @@ import { CSSTransition, TransitionGroup} from 'react-transition-group';
 import { createSelector } from '@reduxjs/toolkit';
 
 
-import { heroDeleted, fetchHeroes } from './heroesSlice';
+import { heroDeleted, fetchHeroes, selectAll } from './heroesSlice';
 
 import HeroesListItem from "../heroesListItem/HeroesListItem";
 import Spinner from '../spinner/Spinner';
@@ -16,7 +16,7 @@ const HeroesList = () => {
 
     const filteredHeroesSelector = createSelector(
         (state) => state.filters.activeFilter,
-        (state) => state.heroes.heroes,
+        selectAll,
         (filter, heroes) => {
             if (filter === 'all') {
                 return heroes;
