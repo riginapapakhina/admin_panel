@@ -1,28 +1,16 @@
 {
   "heroes": [
     {
-      "id": 1,
-      "name": "Первый герой",
-      "description": "Первый герой в рейтинге!",
+      "id": "5f068dbc-a910-4e69-bd2d-fad2b8e79f8f",
+      "name": "Фея",
+      "description": "Летает над цветами и мелко пакостит",
+      "element": "wind"
+    },
+    {
+      "id": "69187042-4d04-4883-a64c-33a9b971b35f",
+      "name": "Ящер подземелий",
+      "description": "Пуляет огненными шарами",
       "element": "fire"
-    },
-    {
-      "id": 2,
-      "name": "Неизвестный герой",
-      "description": "Скрывающийся в тени",
-      "element": "wind"
-    },
-    {
-      "id": "36b522d1-4566-4a52-b519-08b49941e97d",
-      "name": "Rigina",
-      "description": "okoio",
-      "element": "wind"
-    },
-    {
-      "id": "a1369efe-c7c3-4702-8f08-4314b7a26938",
-      "name": "Hulk",
-      "description": "fkjdkfjdfkjf",
-      "element": "earth"
     }
   ],
   "filters": [
