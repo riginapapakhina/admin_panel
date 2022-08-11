@@ -34,11 +34,11 @@
 - Разделение reducers для дальнейшего удобства работы и применение CreateSelector() из reselect
 - Улучшение store и добавление ему новых возможностей при помощи Store enhancers. В качестве практики создан собственный кастомный enhancer. Добавление applyMiddleWare()
 - Подключение redux-thunk. Он используется для замедленного отображения блоков с персонажами. В файле actions.js функция activeFilterChanged получила setTimeout()
-- Применение redux toolkit:
-configureStore()
-createSlice()
-createAsyncThunk()
-createEntityAdapter()
+- Применение redux toolkit в целях оптимизации:
+configureStore() - помогает при взаимодействии с MiddleWare и devTools;
+createSlice() и
+createAsyncThunk() - позволили перенести всю логику работы в один срез HeroesSlice.js;
+createEntityAdapter() - В проекте позволяет обеспечить разделение на логическую часть, за которую отвечает redux, и визуальную, которая рендерится на страницу
 
 
 
